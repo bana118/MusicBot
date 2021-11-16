@@ -6,6 +6,7 @@ RUN apt update \
     git \
     gcc \
     build-essential \
+    ffmpeg \
     && apt autoremove -y \
     && apt clean -y \
     && rm -rf /var/lib/apt/lists/*

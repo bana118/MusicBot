@@ -5,4 +5,5 @@
         "ms-python.python",
         "ms-python.vscode-pylance"
     ],
+    "postCreateCommand": "pip install -r requirements.txt --use-deprecated=legacy-resolver"
 }
