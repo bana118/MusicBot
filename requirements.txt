@@ -3,7 +3,8 @@
 # discord.py[voice]==1.2.5
 git+https://github.com/Rapptz/discord.py@master#egg=discord.py[voice]
 pip
-youtube_dl
+# youtube_dl
+yt-dlp
 colorlog
 cffi --only-binary all; sys_platform == 'win32'
 websockets
