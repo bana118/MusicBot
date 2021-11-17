@@ -33,7 +33,13 @@ class Config:
         self._confpreface = "An error has occured reading the config:\n"
         self._confpreface2 = "An error has occured validating the config:\n"
 
-        self._login_token = config.get('Credentials', 'Token', fallback=ConfigDefaults.token)
+        # self._login_token = config.get('Credentials', 'Token', fallback=ConfigDefaults.token)
+
+        env_token = os.environ.get('BOT_TOKEN')
+        if env_token is None:
+            self._login_token = config.get('Credentials', 'Token', fallback=ConfigDefaults.token)
+        else:
+            self._login_token = env_token
 
         self.auth = ()
 
